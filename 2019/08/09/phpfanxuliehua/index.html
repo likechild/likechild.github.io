@@ -57,14 +57,18 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="likechild&#39;blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="对这几天以来顶的php反序列化来做一个总结吧： php反序列化漏洞也被称作php对象注入。序列化和反序列化的目的是使得程序间传输对象更加方便。序列化是将对象转换为字符串以便存储和传输的一种方式。而反序列化就是序列化的逆过程，它会将字符串重新转换为对象供程序使用。     嘤嘤嘤，在实现这个漏洞需要一种php魔法函数，这里总结了一些：             _construct()  //当一个对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于php反序列化的总结">
+<meta property="og:url" content="http://yoursite.com/2019/08/09/phpfanxuliehua/index.html">
 <meta property="og:site_name" content="likechild&#39;blog">
+<meta property="og:description" content="对这几天以来顶的php反序列化来做一个总结吧： php反序列化漏洞也被称作php对象注入。序列化和反序列化的目的是使得程序间传输对象更加方便。序列化是将对象转换为字符串以便存储和传输的一种方式。而反序列化就是序列化的逆过程，它会将字符串重新转换为对象供程序使用。     嘤嘤嘤，在实现这个漏洞需要一种php魔法函数，这里总结了一些：             _construct()  //当一个对">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-09T02:27:18.787Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="likechild&#39;blog">
-  <link rel="canonical" href="http://yoursite.com/">
+<meta name="twitter:title" content="关于php反序列化的总结">
+<meta name="twitter:description" content="对这几天以来顶的php反序列化来做一个总结吧： php反序列化漏洞也被称作php对象注入。序列化和反序列化的目的是使得程序间传输对象更加方便。序列化是将对象转换为字符串以便存储和传输的一种方式。而反序列化就是序列化的逆过程，它会将字符串重新转换为对象供程序使用。     嘤嘤嘤，在实现这个漏洞需要一种php魔法函数，这里总结了一些：             _construct()  //当一个对">
+  <link rel="canonical" href="http://yoursite.com/2019/08/09/phpfanxuliehua/">
 
 
 <script id="page.configurations">
@@ -73,7 +77,7 @@
   };
 </script>
 
-  <title>likechild'blog</title>
+  <title>关于php反序列化的总结 | likechild'blog</title>
   
 
 
@@ -112,7 +116,7 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <div class="container sidebar-position-left page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -145,7 +149,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
       
     
 
@@ -190,8 +194,9 @@
 
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-      
+
+  <div id="posts" class="posts-expand">
+    
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -212,10 +217,8 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/09/phpfanxuliehua/" class="post-title-link" itemprop="url">关于php反序列化的总结</a>
+          <h1 class="post-title" itemprop="name headline">关于php反序列化的总结
+
               
             
           </h1>
@@ -253,8 +256,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
-            <pre><code>对这几天以来顶的php反序列化来做一个总结吧：
+        <pre><code>对这几天以来顶的php反序列化来做一个总结吧：
 php反序列化漏洞也被称作php对象注入。序列化和反序列化的目的是使得程序间传输对象更加方便。序列化是将对象转换为字符串以便存储和传输的一种方式。而反序列化就是序列化的逆过程，它会将字符串重新转换为对象供程序使用。
     嘤嘤嘤，在实现这个漏洞需要一种php魔法函数，这里总结了一些：
             _construct()  //当一个对象创建时被调用
@@ -268,9 +270,6 @@ php反序列化漏洞也被称作php对象注入。序列化和反序列化的�
             _unset()  //在不可访问的属性上使用unset()时触发
             _invoke()  //当脚本尝试将对象调用为函数时触发
             。。。可能还有其它的没有遇到的一些魔法函数，以后会慢慢补上</code></pre>
-          
-        
-      
     </div>
 
     
@@ -278,117 +277,19 @@ php反序列化漏洞也被称作php对象注入。序列化和反序列化的�
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/01/sql-access/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="likechild">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="likechild'blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/01/sql-access/" class="post-title-link" itemprop="url">sql注入之access</a>
-              
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2019/08/01/sql-access/" rel="next" title="sql注入之access">
+                <i class="fa fa-chevron-left"></i> sql注入之access
+              </a>
             
-          </h1>
-        
+          </div>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
+          <span class="post-nav-divider"></span>
 
-              
-                
-              
-
-              <time title="Erstellt: 2019-08-01 15:25:11 / Geändert am: 16:03:53" itemprop="dateCreated datePublished" datetime="2019-08-01T15:25:11+08:00">2019-08-01</time>
-            </span>
-          
-            
-
-            
-          
-
-          <br/>
-
+          <div class="post-nav-prev post-nav-item">
+          </div>
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <pre><code>最近一直忙着一些乱七八糟的事，把之前的一些关于access注入的总结写一下吧   
-1.判断是否存在注入
-‘         报错 
-and 1=1 返回正常 
-and 1=2 返回错误 
-order by xx  查询字段数量  /order by xx 回显正常 order by xx+1 回显错误 表明有xx个字段
-
-2.猜表名
-url union select 1,2,3,4,5,6,7,8,...,xx from admin   //这条语句的意思是判断是否存在admin表
-之后可以猜password和username
-这里总结了一下access数据库中常见的管理员表名：
-admin admin_user admin_msg admin _usr admin_login username manager manag msg_user msg_login useradmin user_msg userlogin suers member
-管理员表下常见的管理员列名：
-admin admin_user username users usr user_login user_name name loginname admin_login msg_name
-密码列名：
-password pwd pass user_pass
-
- 3.还可以通过这种比较麻烦的逐字查询法来顶一下
- 查表：and exists (select * from 表名)   返回正常 存在admin表  
- 查列：and exists (select 列名 from 表名) 
- 查数据：1.确定长度 2.确定asc数据(asc编码) 
-and (select top 1 len(列) from admin)=   
-and (select top 1 asc(mid(列,位,1)) from admin)= 
-and (select top 1 asc(mid(列,位,1)) from admin)=  
-这种方法比较麻烦，可能要整好久
-
-4.sqlmap一把梭
-借鉴大佬的博客，写的一些基础的命令：https://www.cnblogs.com/iAmSoScArEd/articles/9263735.html</code></pre>
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
     </footer>
   </div>
   
@@ -396,14 +297,12 @@ and (select top 1 asc(mid(列,位,1)) from admin)=
   
   </article>
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
 
         </div>
           
@@ -534,6 +433,10 @@ and (select top 1 asc(mid(列,位,1)) from admin)=
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   <script src="/js/next-boot.js?v=7.2.0"></script>
 
